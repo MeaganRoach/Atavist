@@ -1,0 +1,159 @@
+<html>
+<head>
+	<title> Southwest: The Magazine Stories </title>
+
+</head>
+<body>
+<header class="nav-up">
+<!-- Possible future Nav, will link to stories pretending to be pages <div class="links"> 
+		<li> <a href"#">About </a> </li>	
+		<li> <a href"#">About </a> </li>	
+ 		<li> Subscribe </li>
+	</div> -->
+	<a href="#"> 
+		<img src="https://swtmmediakit.files.wordpress.com/2015/09/website-banner-02.png?"  align="right" style="padding:1em 6% .5em 5em; height:4.5em; width:auto; position:relative;"> 
+<!--Need to figure our image ref, quick fix--> 
+	</a>
+</header><!-- End Header --> 
+	
+
+<div id="featured_container"> <!-- Featured Story Container Begins Wraps featured img and story --> 
+	{{#library tags="featured" paginationLimit="1"}}	 		
+		<div class="skew">
+			<a href="{{url}}"> 
+				<img src="{{library_jacket_expanded_cropandscale_center~2000x1000canscaleup~}}">
+			</a>
+		</div>
+	
+		<div class="featured_story"> <!-- Featured Story Begins - Returns Story Tagged "featured" -->
+			<a href="{{url}}"> 
+				<p class="featured">feature story <b class="arrow">↗</b>
+				</p>
+				<h1> {{title}} <br> </h1> 
+			</a>
+				<p class="featured_subtitle">{{excerpt}}</p>
+			<p class="author"><b class="orange">/</b>By {{author_display}} </p>
+			<p class="published_on" style="padding-top;5px;"> <i> Published in-flight on {{pub_date format="M j, Y"}}</i> </p> 
+				
+		</div>	<!-- End Featured Story --> 
+	{{/library}}
+</div> <!-- Ends Featured Div Container -->
+	
+<div id="container"> <!-- Body Container Begins --> 
+<hr width="80%">
+	<div class="Story_Block_Header">
+		<h1>Some of our Favorites </h1> 
+		<p class="featured_subtitle"> We've gone through our issues, and pulled out the best of the best for you to read here  </p>
+	</div>
+		<div id="story_block_container"><!-- Story Container Begins --> 
+			{{#library tags="top3" paginationLimit="3"}}
+				<ul>
+					<div class="story_block">
+						<li> 
+							<div class="img_crop_box_top3"> <!-- Resizes Image To Fit --> 
+								<a href="{{url}}"> 
+									<img src="{{library_jacket_expanded_cropandscale_center~500x250~}}"/>
+								</a>
+							</div>
+							<div class="copy_crop_box">
+								<h1 class="story_block_title">  
+									<a href="{{url}}">
+										{{title}}
+									</a> 
+								</h1> 
+								<p class="subtitle_large">{{excerpt}}</p>
+							</div>
+						</li>
+					</div><!--ends story block-->
+				</ul>
+			{{/library}} 
+	</div><!--ends first story container (returns top 3/popular tags)-->
+	
+	<div id="story_block_container_more">
+		{{#library tags="front_page" paginationLimit="4" paginationOffset="+1"}}
+			<ul>
+				<div class="story_block_more">
+					<li> 
+						<div class="img_crop_box"> 
+							<a href="{{url}}"> 
+								<img src="{{library_jacket_expanded_cropandscale_center~300x250~}}"/>
+							</a>
+						</div>
+						<div class ="copy_crop_box">
+							<h2 class="story_block_title">  
+								<a href="{{url}}">
+									{{title}}
+								</a> 
+							</h2> 
+							{{#subtitle}} 
+								<p class="subtitle_small">{{subtitle}}</p>
+							{{/subtitle}}
+						</div>
+					</li>
+				</div><!--ends story block more-->
+			</ul>
+		{{/library}} 
+	</div><!--ends second story container (returns all stories in chronological order)-->
+
+	<div id="story_block_container_sales" class="sponsored">
+		<p> Sponsored Content </p>
+	
+		{{#library tags="front_page" paginationLimit="2" paginationOffset="+1"}}
+			<ul>			
+				<div class="story_block_sales">
+					<li> 
+						<div class="img_crop_box_sales"> 
+							<a href="{{url}}"> 
+								<img src="{{library_jacket_expanded_cropandscale_center~150x150~}}"/>
+							</a>
+						</div>
+					<div class="copy_crop_box_sales">
+						<p style="padding:.1em; margin: 0;"> Presented by {{author_display}}</p>
+					<h2 style="padding:.1em; padding-top:.2em; margin: 0;"> 
+						<a href="{{url}}">
+							<b> {{title}} </b>
+						</a> 
+					</h2> 
+					{{#subtitle}} 
+						<p style="padding: .1em; padding-top:.2em; margin:0;"> {{subtitle}}</p>
+					{{/subtitle}}
+					</div>
+				</li>
+			</div><!--ends story block sales-->
+		{{/library}} 
+	</ul>
+</div><!--ends sales story container-->
+
+<footer class="legal"><!-- need to figure out this nave as well -->
+		<hr>
+		<ul class="social" style="margin-top: 5px;">
+		  <li><a href="https://issuu.com/southwestmag" target="blank" > View Current Issue <b class="orange">/</b> </a>
+		  <a href="mailto:letters@southwestmag.com" target="blank">  Contact Us <b class="orange">/</b></a>
+		  <a href="http://southwestmag-mediakit.com/" target="blank">  Media Kit <b class="orange">/</b></a>
+			<a href="http://swamedia.com/magazine"> <b> <i> Southwest:The Magazine </i></b></a> is Published by <a href="http://www.paceco.com/"> <b> <i> Pace </i></b> </a>
+			</li>
+		</ul>
+		<ul class="icons">
+			<li>
+				<a href="https://www.facebook.com/southwestmagazine"><img src="https://swtmmediakit.files.wordpress.com/2015/08/social-media-icons-011.png?h=40" alt="Facebook" style="
+    margin-top: 5px;"/>
+				</a>
+			</li>
+			<li>	
+				<a href="https://twitter.com/southwestthemag" style="color: #ffffff;" target="_blank">
+				<img src="https://swtmmediakit.files.wordpress.com/2015/08/social-media-icons-021.png?h=50" alt="Twitter" style="display: block;" border="0" />
+				</a>
+				</li>
+			<li>							
+			<a href="https://instagram.com/southwestmagazine/" style="color: #ffffff;" target="_blank">
+			<img src="https://swtmmediakit.files.wordpress.com/2015/08/social-media-icons-031.png?h=50"alt="Instagram" style="display: block;" border="0" />
+			</a>
+				</li>
+			
+		</ul>	
+
+</footer><!--ends footer-->
+</div><!--ends story block container (Footer table included for auto resize)-->
+
+</body>
+</html>
