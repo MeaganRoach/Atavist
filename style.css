@@ -1,0 +1,705 @@
+// Fixes word breaks
+
+@media print {
+	h1, h2, h3, p, h2, h3 { orphans: 2; widows: 2; }
+}
+
+html { 
+	font-size: 16px; /* Sets the baseline as 1em or 12pt or 16px */	
+	line-height: auto;
+	text-rendering: optimizeLegibility; /* for kerning, ligatures, and other font features */	
+	-webkit-text-size-adjust: 100%; /* prevents unintended font resizing in mobile Safari */
+	-webkit-font-smoothing: antialiased;
+	word-wrap: keep-all; /* Breaks words at spaces, to break at syllables use break-all; */	 
+	}
+
+
+/* SITE FRAMEWORK *************************************************************************************** *************************************************************************************** *************************************************************************************** *************************************************************************************** *************************************************************************************** *************************************************************************************** */
+
+a { 
+   text-decoration: none;
+   color: #000000;
+}
+
+a:hover {
+	color: #f05a28;
+}
+
+ul { 
+	list-style-type:none;
+	margin: 0;
+	padding: 0;
+}
+
+img { 
+	display: block;
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	-ms-interpolation-mode: bicubic;
+}
+
+.logo {
+	width:200px;
+	align:right; 
+	padding:1em 6% .5em .5em
+}
+
+/* DIV BOXES *************************************************************************************** *************************************************************************************** *************************************************************************************** *************************************************************************************** *************************************************************************************** *************************************************************************************** */
+
+header {
+    background: #ffffff;
+	 width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    transition: top .9s ease-in-out;  /* Sliding Animation On Scroll See JS */
+	opacity: 0.85;
+	z-index: 99;
+}
+
+.nav-up {
+    top: -200px;
+}
+
+
+div.links { /* Navigation Style */
+	position: relative;
+    display: block;
+    float: left;
+    font-family: Urban Grotesk;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 2%;
+    padding-left: 10%;
+    text-transform: uppercase;
+    color: #000000;
+    list-style: none;
+}
+
+body, .body { /*Wraps Featured Container*/
+	width:100%;
+	margin: 0;
+	align:top center;
+}
+
+
+.legal { /* Basically the Footer*/
+
+	clear: both;
+	max-width: 100%; 
+	margin-left: 10%;
+	margin-right: 10%;
+	padding-top: 1em;
+	font-size: 1em;
+	font-family: Urban Grotesk;
+	/* text-transform: uppercase; */
+	color: #000000;
+
+}
+
+ul.social { /* Basically the Footer*/
+	list-style: none;
+	display: inline-flex;
+	float: left;
+	width: 80%; 
+	height: 2em;
+	margin: 0;
+	padding:0;
+
+}
+
+
+ul.icons { /* Basically the Footer*/
+	display: inline-flex;
+    float: right;
+	margin-top:-.8em;
+
+ 
+}
+
+
+#featured_container { /* Wraps all Featured Story content*/
+	width: 100%; 
+	height: auto;
+	margin: 0, auto;
+	padding; 0;
+}
+	.featured_story { 
+		width: 100%; 
+		padding-left: 10%;
+		padding-right: 10%;
+		margin-top: -2%; /* Activate  for rotated div */
+	}
+
+/* Brand Styling Slant on Bottom of image effect, Rotates the Div, then unrotates the image */
+		
+		.skew {
+			-webkit-backface-visibility: hidden;
+			-webkit-transform: skew(0, 4deg);
+			overflow:hidden;
+			z-index: 98;
+			width: 110%;
+			margin-top: -10%;
+			position:relative;
+			/* border:1px solid #666; activate for testing */	
+		}
+
+		.skew img {
+			  -webkit-transform: skew(0,-5deg);
+			  position:relative;			 
+			  transform:scale(1.0,1.0);
+		}
+
+	
+
+#container { /* Starts Below the Featured Container, wraps all story Containers*/
+	max-width: 100%;
+	margin: 0, auto;
+	padding-left: 10%
+	padding-right:10%;
+}
+
+	.Story_Block_Header { 
+		width: 100%; 
+		padding-left: 10%;
+		padding-right: 10%;
+		margin-top: -2%; /* Activate  for rotated div */
+	}
+	
+	#story_block_container { 
+		clear:left;
+		max-width: 100%; 
+		margin-left: 10%;
+		margin-right: 10%;
+	} 
+
+#story_block_container_more { /*needed for mobile resize floats*/
+		clear:left;
+		max-width: 100%; 
+		margin-left: 10%;
+		margin-right: 10%;
+	} 
+		.story_block {
+			float: left;
+			width: 31%;
+			height: auto;
+			padding: 1%;
+			margin: 0;
+		}
+
+		.story_block_more { 
+			float: left;
+			width: 23%;
+			height: auto;
+			padding: 1%;
+		}
+
+
+			div.img_crop_box_top3, div.img_crop_box { /* Block - all stories crop box*/
+				overflow: hidden;
+				width: 100%;
+				display: inline-block; /* Block - For Horizontal Stacking */
+			}
+
+			div.copy_crop_box { /* Block - Applies to both of the image crop boxes */
+				clear:both;
+				float:right;
+				height: auto;
+				display: inline-block; /* Block - For Horizontal Stacking */
+			}
+
+/* SALES BLOCK STYLING ***************************************************************************************  *************************************************************************************** */
+div.sponsored { 
+	font-family:lato;
+	margin: 0:
+	padding: 0;
+} 
+
+#story_block_container_sales { 
+		clear:left;
+		max-width: 100%; 
+		margin-left: 10%;
+		margin-right: 10%;
+		height: 10em;
+		margin-top: 5%;
+		padding-top:1em;
+		
+	} 
+	
+	.story_block_sales { 
+		float: left;
+		width: 46%;
+		height: auto;
+		padding: 2%;
+		display: inline-block;	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAHElEQVQIW2M8c+bMfxMTE0YGKIAzMARgKjFUAABgFQgFXMJ+agAAAABJRU5ErkJggg==);
+		min-height: 8em;
+		border-top: .125em solid #000000;
+		}
+
+			div.img_crop_box_sales {  /* Sales-Tie Ins */
+				overflow: hidden;
+				float: left;
+				height: auto;
+				width: 30%;
+				display: inline-block;
+				padding-right:3%;
+				padding-top: 0.25em;
+			}
+
+				div.copy_crop_box_sales { 
+					float:left;
+					width: 67%;
+					height: auto;
+				
+					display: inline-block;
+				}
+
+/* JUNK DRAWER ***************************************************************************************  *************************************************************************************** */
+
+.orange { 
+	color:#f05a28;
+	font-weight: 700;
+	font-family: Urban_Grotesk_Regular;	
+}
+
+.arrow { 
+	color:#f05a28;
+	font-weight: 700;
+	font-family: Urban_Grotesk_Regular;	
+}
+
+#slash{
+	/* Width defined inline for specific style*/
+    z-index: 98;
+	margin: 0;
+	padding: 0;
+	margin-top: -2%;
+	height: .3em;
+	 border-top: .3em, solid black;
+    -moz-transform: rotate(2deg);
+    -webkit-transform: rotate(2deg);
+    -o-transform: rotate(2deg);
+    -ms-transform: rotate(2deg);
+    transform: rotate(2deg); 
+}
+	
+/* TYPOGRAPHY, DEFINED IN EM for BASELINE GRID ALIGNMENT 
+	Baseline in multiples of 2 starting at 6pt or .5em
+	
+Handy Dandy Chart below: 
+
+defaults
+p word-spacing: 0.25em;
+h1  word-spacing: -0.125em;
+
+*************************************************************************************** *************************************************************************************** *************************************************************************************** *************************************************************************************** *************************************************************************************** *************************************************************************************** */
+
+h1 { 
+	font-family: Tabac_Slab_Regular;
+	line-height: .95em;
+	font-size: 4em;
+	letter-spacing: .01em;
+	word-spacing: -0.125em;
+	}
+
+.featured_subtitle { /* Featured Stories and Page */
+	margin-top:-1em;
+	font-size: 2em;
+	width: 80%;
+	font-family: Tabac_Slab_Regular;
+	line-height: 1.15em; /*1.25em is default */
+	font-weight: 400;
+	color: #666666;
+}
+
+
+h1.story_block_title { /* Top 3 Stories */
+	margin-top: .25em;
+	margin-left: -.1em; /*Nudges headlines to optically align with body text */
+	font-family: Tabac_Slab_Regular;
+	font-size: 2.7em; 
+	line-height: 1em;
+    min-height: 2em; /*Ensures base alignment with long and short headlines */
+	font-weight: 500;
+	letter-spacing: .01em;
+	}
+	
+p.subtitle_large {  /* Top 3 Stories */
+	font-family: Tabac_G3_Regular;
+	margin-top: -.7em;
+	min-height: 8em;
+	font-size: 1.8em;
+	line-height: 1.25em;
+	font-weight: 400;
+	letter-spacing: .0em;
+	color:#424242;
+ 	orphans: 2; 
+	widows: 2;
+	
+}
+	
+h2.story_block_title { /* front_Page Stories */
+	margin-left: -.1em; /*Nudges headlines to optically align with body text */
+	font-family: Tabac_Slab_Regular;
+	font-size: 2em;
+	line-height: 1em;
+	min-height: 1em;
+	font-weight: 500;
+	margin-top: .5em;
+	letter-spacing: .01em;
+	
+}
+	
+p.subtitle_small { /* front_Page Stories */
+	margin-top: -.7em;
+	font-family: Tabac_G3_Regular;
+	font-size: 18pt;
+	line-height: 1.25em;
+	letter-spacing: 0 em;
+	font-weight: 400;
+	color: #424242
+	hyphens: auto;
+	orphans: 2;
+	widows: 2;
+}
+
+
+p.author { 
+	font-family: Urban_Grotesk_Bold;
+	margin-left:-.4em;
+	font-size: 12pt;
+	padding-bottom: .1em;
+	/* text-transform: uppercase; */
+	color: #000000;
+	width: 70%;
+	/* text-align:right; */
+}
+
+p.featured { 
+	margin-bottom:-2em;
+	margin-left: .2em;
+	line-height: 1em;
+	font-family: Urban_Grotesk_Bold;
+	font-size: 15pt;
+	text-transform: uppercase;
+	color: #000000;
+}
+
+.published_on {
+	font-family: Tabac_G3_Regular;
+	font-size: 1em;
+	margin-top: -1em;
+	font-style: italic;
+	color:#666666;
+	
+}
+
+
+/* MEDIA SCREENS *************************************************************************************** *************************************************************************************** *************************************************************************************** *************************************************************************************** *************************************************************************************** *************************************************************************************** */
+
+@media (min-width: 1280px) and (max-width: 2000px) {
+  }
+  
+@media (min-width: 780px) and (max-width: 1280px) {
+  }
+  
+
+@media screen (min-width: 600px) and (max-width: 780px) {
+  }
+  
+  
+@media screen and (max-device-width: 480px) and (orientation: portrait){
+
+    html {
+        font-size: 12pt/1em;
+    }
+
+	h5.featured {
+	line-height: 1em;
+	}
+	
+h1 {
+    font-size: 9em;
+	line-height: 1em;
+	margin-top: 1em;
+	margin-left: -.1em;
+}
+	
+p.featured_subtitle {
+    font-size: 2.5em;
+    line-height: 1em;
+    color: #666666;
+	}
+	
+p.author  {
+    font-family: Urban_Grotesk_Bold;
+	margin-left: -.0em;
+    font-size: 1em;
+    padding-bottom: .1em;
+    color: #000000;
+    width: 90%;
+	text-align:right;
+	}
+	
+p.featured  {
+    font-size: 1em;
+    width: 90%;	
+	}	
+	
+.published_on {
+    width: 90%;
+	text-align:right;
+	font-family: Tabac_G3_Regular;
+	}
+	
+.featured_story_container,  {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+	}
+	
+.Story_Block_Header {
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+	}
+	
+div.img_crop_box_top3, {
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+h1.story_block_title, h2.story_block_title {
+	font-family: Tabac_Slab_Regular;
+    margin-top: .25em;
+    margin-left: -.1em;
+    font-size: 8em;
+    line-height: 1em;
+    min-height: 1em;
+    font-weight: 400;
+    letter-spacing: .01em;
+  
+}
+
+p.subtitle_large, p.subtitle_small {
+	 font-size: 4em;
+    line-height: 1em;
+	font-family: Tabac_G3_Regular;
+	
+}
+
+
+	
+#story_block_container, #story_block_container_more  {
+    clear: left;
+	float: left;
+    max-width: 100%;
+	margin: 0;
+	padding: 0;
+}
+	
+.story_block {
+    clear: both;
+    width: 100%;
+	margin-left; 5%;
+	margin-right; 5%;
+}
+	
+.story_block_more {
+ 	clear: both;
+    width: 100%;
+	margin-left; 5%;
+	margin-right; 5%;
+  
+	}
+	
+	#story_block_container_sales {
+       clear: left;
+    max-width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+	}
+	
+.story_block_sales {
+    float: left;
+    width: 100%;
+    height: auto;
+    padding: 4%;
+	}
+	
+div.copy_crop_box_sales {
+    float: left;
+    width: 50%;
+    height: auto;
+    display: inline-block;
+}
+	
+ul.li icons {
+	width:100%;
+    display: inline-block;
+    align-items: center;
+    margin-top: -.8em;
+}
+	
+}
+ 
+ 
+ /* Font REF *************************************************************************************** *************************************************************************************** *************************************************************************************** *************************************************************************************** *************************************************************************************** *************************************************************************************** */
+
+ 
+@font-face { 
+	font-family: "Tabac_Slab_Regular";
+	src: url('https://dh1rvgpokacch.cloudfront.net/atavist/48067/document/raw/tabacslabr-1455313335-3.woff') format('woff');
+	}
+
+@font-face { 
+	font-family: "Tabac_Slab_Bold";
+	src: url('https://dh1rvgpokacch.cloudfront.net/atavist/48067/document/raw/tabacslabb-1455994107-100.woff') format('woff');
+	}
+
+@font-face { 
+	font-family: "Tabac_Slab_Black";
+	src: url('https://dh1rvgpokacch.cloudfront.net/atavist/48067/document/raw/tabacslabb-1456024588-71.woff') format('woff');
+	}
+
+@font-face { 
+	font-family: "Tabac_Slab_Bold_Italic";
+	src: url('https://dh1rvgpokacch.cloudfront.net/atavist/48067/document/raw/tabacslabb-1456024610-5.woff') format('woff');
+	}
+
+@font-face { 
+	font-family: "Tabac_Slab_Hair";
+	src: url('https://dh1rvgpokacch.cloudfront.net/atavist/48067/document/raw/tabacslabh-1456024620-97.woff') format('woff');
+	}
+
+@font-face { 
+	font-family: "Tabac_Slab_Hair_Italic";
+	src: url('https://dh1rvgpokacch.cloudfront.net/atavist/48067/document/raw/tabacslabh-1456024632-22.woff') format('woff');
+	}
+
+@font-face { 
+	font-family: "Tabac_Slab_Light_Italic";
+	src: url('https://dh1rvgpokacch.cloudfront.net/atavist/48067/document/raw/tabacslabl-1456024642-26.woff') format('woff');
+	}
+
+@font-face { 
+	font-family: "Tabac_Slab_Medium_Italic";
+	src: url('https://dh1rvgpokacch.cloudfront.net/atavist/48067/document/raw/tabacslabm-1456024652-50.woff') format('woff');
+	}
+
+@font-face { 
+	font-family: "Tabac_Slab_Semibold_Italic";
+	src: url('https://dh1rvgpokacch.cloudfront.net/atavist/48067/document/raw/tabacslabs-1456024678-4.woff') format('woff');
+	}
+
+@font-face { 
+	font-family: "Tabac_Slab_Thin";
+	src: url('https://dh1rvgpokacch.cloudfront.net/atavist/48067/document/raw/tabacslabt-1456024686-70.woff') format('woff');
+	}
+
+@font-face { 
+	font-family: "Tabac_Slab_Thin_Italic";
+	src: url('https://dh1rvgpokacch.cloudfront.net/atavist/48067/document/raw/tabacslabt-1456024692-44.woff') format('woff');
+	}
+
+@font-face { 
+	font-family: "Tabac_G3_Bold";
+	src: url('https://dh1rvgpokacch.cloudfront.net/atavist/48067/document/raw/tabacg3bol-1456024842-1.woff') format('woff');
+	}
+
+@font-face { 
+	font-family: "Tabac_G3_Bold_Italic";
+	src: url('https://dh1rvgpokacch.cloudfront.net/atavist/48067/document/raw/tabacg3bol-1456024847-1.woff') format('woff');
+	}
+
+@font-face { 
+	font-family: "Tabac_G3_Italic";
+	src: url('https://dh1rvgpokacch.cloudfront.net/atavist/48067/document/raw/tabacg3ita-1456024853-13.woff') format('woff');
+	}
+
+@font-face { 
+	font-family: "Tabac_G3_Medium";
+	src: url('https://dh1rvgpokacch.cloudfront.net/atavist/48067/document/raw/tabacg3med-1456024860-82.woff') format('woff');
+	}
+
+@font-face { 
+	font-family: "Tabac_G3_Medium_Italic";
+	src: url('https://dh1rvgpokacch.cloudfront.net/atavist/48067/document/raw/tabacg3med-1456024865-65.woff') format('woff');
+	}
+
+@font-face { 
+	font-family: "Tabac_G3_Regular.";
+	src: url('https://dh1rvgpokacch.cloudfront.net/atavist/48067/document/raw/tabacg3reg-1456024882-76.woff') format('woff');
+	}
+
+@font-face { 
+	font-family: "Tabac_G3_Semibold";
+	src: url('https://dh1rvgpokacch.cloudfront.net/atavist/48067/document/raw/tabacg3sem-1456024886-88.woff') format('woff');
+	}
+
+@font-face { 
+	font-family: "Tabac_G3_Semibold_Italic";
+	src: url('https://dh1rvgpokacch.cloudfront.net/atavist/48067/document/raw/tabacg3sem-1456024892-95.woff') format('woff');
+	}
+
+@font-face { 
+	font-family: "Urban_Grotesk_Black";
+	src: url('https://dh1rvgpokacch.cloudfront.net/atavist/48067/document/raw/urbangrotes-1456025030-40.woff') format('woff');
+	}
+
+@font-face { 
+	font-family: "Urban_Grotesk_Black_Italic";
+	src: url('https://dh1rvgpokacch.cloudfront.net/atavist/48067/document/raw/urbangrotes-1456025063-87.woff') format('woff');
+	}
+
+@font-face { 
+	font-family: "Urban_Grotesk_Bold";
+	src: url('https://dh1rvgpokacch.cloudfront.net/atavist/48067/document/raw/urbangrotes-1456025068-79.woff') format('woff');
+	}
+
+@font-face { 
+	font-family: "Urban_Grotesk_Bold_Italic";
+	src: url('https://dh1rvgpokacch.cloudfront.net/atavist/48067/document/raw/urbangrotes-1456025072-54.woff') format('woff');
+	}
+
+@font-face { 
+	font-family: "Urban_Grotesk_Italic";
+	src: url('https://dh1rvgpokacch.cloudfront.net/atavist/48067/document/raw/urbangrotes-1456025080-49.woff') format('woff');
+	}
+
+@font-face { 
+	font-family: "Urban_Grotesk_Light";
+	src: url('https://dh1rvgpokacch.cloudfront.net/atavist/48067/document/raw/urbangrotes-1456025084-44.woff') format('woff');
+	}
+
+@font-face { 
+	font-family: "Urban_Grotesk_Light_Italic";
+	src: url('https://dh1rvgpokacch.cloudfront.net/atavist/48067/document/raw/urbangrotes-1456025090-39.woff') format('woff');
+	}
+
+@font-face { 
+	font-family: "Urban_Grotesk_Medium";
+	src: url('https://dh1rvgpokacch.cloudfront.net/atavist/48067/document/raw/urbangrotes-1456025094-94.woff') format('woff');
+	}
+
+@font-face { 
+	font-family: "Urban_Grotesk_Medium_Italic";
+	src: url('https://dh1rvgpokacch.cloudfront.net/atavist/48067/document/raw/urbangrotes-1456025100-1.woff') format('woff');
+	}
+
+@font-face { 
+	font-family: "Urban_Grotesk_Regular";
+	src: url('https://dh1rvgpokacch.cloudfront.net/atavist/48067/document/raw/urbangrotes-1456025106-80.woff') format('woff');
+	}
+
+@font-face { 
+	font-family: "Urban_Grotesk_Semibold_Italic";
+	src: url('https://dh1rvgpokacch.cloudfront.net/atavist/48067/document/raw/urbangrotes-1456025140-37.woff') format('woff');
+	}
+@font-face { 
+	font-family: "Urban_Grotesk_Semibold_Italic";
+	src: url('https://dh1rvgpokacch.cloudfront.net/atavist/48067/document/raw/urbangrotes-1456025140-37.woff') format('woff');
+	}
