@@ -1,5 +1,4 @@
 @import "bourbon/bourbon";
-@import "setup";
 
 $primaryBackgroundColor: white;
 $primaryTextColor: #3C3C3C;
@@ -17,36 +16,47 @@ $primaryTextColor: #3C3C3C;
 @include font-face( "Tabac_Slab_Black", Tabac_Slab_Black, black, italic);
 @include font-face("Tabac_Slab_Black_Italic",  Tabac_Slab_Black_Italic, black, italic);
 
-$tabacSlab-font: "Tabac_Slab_Hair",  "Tabac_Slab_Hair_Italic", "Tabac_Slab_Thin",  "Tabac_Slab_Thin_Italic", "Tabac_Slab_Regular", "Tabac_Slab_Italic", "Tabac_Slab_Semibold", "Tabac_Slab_Bold", "Tabac_Slab_Black", "Tabac_Slab_Black_Italic";
+$tabacSlabFamily-font: "Tabac_Slab_Hair",  "Tabac_Slab_Hair_Italic", "Tabac_Slab_Thin",  "Tabac_Slab_Thin_Italic", "Tabac_Slab_Regular", "Tabac_Slab_Italic", "Tabac_Slab_Semibold", "Tabac_Slab_Bold", "Tabac_Slab_Black", "Tabac_Slab_Black_Italic";
 
 
-@include font-face("Tabac_G3_Regular", Tabac_G3_Regular);
-@include font-face("Tabac_G3_Italic", Tabac_G3_Italic);
-@include font-face("Tabac_G3_Semibold", Tabac_G3_Semibold);
-@include font-face("Tabac_G3_Semibold_Italic", Tabac_G3_Semibold_Italic);
-@include font-face("Tabac_G3_Bold", Tabac_G3_Bold);
-@include font-face("Tabac_G3_Italic", Tabac_G3_Italic);
+@include font-face("Tabac_G3_Regular", Tabac_G3_Regular, regular, normal);
+@include font-face("Tabac_G3_Italic", Tabac_G3_Italic, regular, italic);
+@include font-face("Tabac_G3_Semibold", Tabac_G3_Semibold, semibold, normal);
+@include font-face("Tabac_G3_Semibold_Italic", Tabac_G3_Semibold_Italic, semibold, italic);
+@include font-face("Tabac_G3_Bold", Tabac_G3_Bold, bold, normal);
+@include font-face("Tabac_G3_Bold_Italic", Tabac_G3_Bold_Italic, bold, italic);
 
-$tabacG3-font: "Tabac_G3_Regular", "Tabac_G3_Italic", "Tabac_G3_Semibold",  "Tabac_G3_Semibold_Italic", "Tabac_G3_Bold", "Tabac_G3_Italic";
+$tabacG3Family-font: "Tabac_G3_Regular", "Tabac_G3_Italic", "Tabac_G3_Semibold",  "Tabac_G3_Semibold_Italic", "Tabac_G3_Bold", "Tabac_G3_Italic";
 
-@include font-face("Urban_Grotesk_Light", Urban_Grotesk_Light);
-@include font-face("Urban_Grotesk_Light_Italic", Urban_Grotesk_Light_Italic);
-@include font-face("Urban_Grotesk_Regular", Urban_Grotesk_Regular);
-@include font-face("Urban_Grotesk_Regular_Italic", Urban_Grotesk_Regular_Italic);
-@include font-face("Urban_Grotesk_Medium", Urban_Grotesk_Medium);
-@include font-face("Urban_Grotesk_Medium_Italic", Urban_Grotesk_Medium_Italic);
-@include font-face("Urban_Grotesk_Semibold", Urban_Grotesk_Semibold);
-@include font-face("Urban_Grotesk_Semibold_Italic", Urban_Grotesk_Semibold_Italic);
-@include font-face("Urban_Grotesk_Bold", Urban_Grotesk_Bold);
-@include font-face("Urban_Grotesk_Bold_Italic", Urban_Grotesk_Bold_Italic);
-@include font-face("Urban_Grotesk_Black",  Urban_Grotesk_Black);
-@include font-face("Urban_Grotesk_Black_Italic",  Urban_Grotesk_Black_Italic);
+@include font-face("Urban_Grotesk_Light", Urban_Grotesk_Light, light, normal);
+@include font-face("Urban_Grotesk_Light_Italic", Urban_Grotesk_Light_Italic, light, italic);
+@include font-face("Urban_Grotesk_Regular", Urban_Grotesk_Regular, regular, normal);
+@include font-face("Urban_Grotesk_Regular_Italic", Urban_Grotesk_Regular_Italic, regular, italic);
+@include font-face("Urban_Grotesk_Medium", Urban_Grotesk_Medium, medium, normal);
+@include font-face("Urban_Grotesk_Medium_Italic", Urban_Grotesk_Medium_Italic, medium, italic);
+@include font-face("Urban_Grotesk_Semibold", Urban_Grotesk_Semibold, semibold, normal);
+@include font-face("Urban_Grotesk_Semibold_Italic", Urban_Grotesk_Semibold_Italic, semibold, italic);
+@include font-face("Urban_Grotesk_Bold", Urban_Grotesk_Bold, bold, normal);
+@include font-face("Urban_Grotesk_Bold_Italic", Urban_Grotesk_Bold_Italic, bold, italic);
+@include font-face("Urban_Grotesk_Black",  Urban_Grotesk_Black, black, normal);
+@include font-face("Urban_Grotesk_Black_Italic",  Urban_Grotesk_Black_Italic, black, italic);
 
-$urbanGrotesk-font:  "Urban_Grotesk_Light",  "Urban_Grotesk_Light_Italic",  "Urban_Grotesk_Regular" , "Urban_Grotesk_Regular_Italic", "Urban_Grotesk_Medium", "Urban_Grotesk_Medium_Italic", "Urban_Grotesk_Semibold",  "Urban_Grotesk_Semibold_Italic" "Urban_Grotesk_Bold",  "Urban_Grotesk_Bold_Italic",  "Urban_Grotesk_Black",  "Urban_Grotesk_Black_Italic";
+$urbanGroteskFamily-font:  "Urban_Grotesk_Light",  "Urban_Grotesk_Light_Italic",  "Urban_Grotesk_Regular" , "Urban_Grotesk_Regular_Italic", "Urban_Grotesk_Medium", "Urban_Grotesk_Medium_Italic", "Urban_Grotesk_Semibold",  "Urban_Grotesk_Semibold_Italic" "Urban_Grotesk_Bold",  "Urban_Grotesk_Bold_Italic",  "Urban_Grotesk_Black",  "Urban_Grotesk_Black_Italic";
 
-@mixin font($weight: 400, $style: normal, $font: 1) {
+@mixin font($font-family) {
   $font-weight: $weight;
   $font-style:  $style;
+
+	//re-defines CSS styling 
+  font-style:  $font-style;
+  font-weight: $font-weight;
+
+
+	//fontname references string of family, weights, styles 
+  $TabacSlab:    quote(nth($tabacSlabFamily-font, $font), $style + $weight);
+  $TabacG3: 	 quote(nth($tabcG3Family-font, $font), $style + $weight);
+  $UrbanGrotesk: quote(nth($urbanGroteskFamily-font, $font), $style + $weight);
+
 
   // Translate Weight
   @if ($weight == 100) or ($weight == hair) or ($weight == ultralight) {
@@ -81,24 +91,27 @@ $urbanGrotesk-font:  "Urban_Grotesk_Light",  "Urban_Grotesk_Light_Italic",  "Urb
   @if $style == normal {
     $style: n;
   }
+	@if $style == regular {
+    $style: n;
+  }
   @else if $style == italic {
     $style: i;
   }
+}
 
 
 
   // Assemble $font-family
-  $primaryFontFamily:   $tabacSlab-font ($weight, $style);
-  $secondaryFontFamily:   $tabacSlab-font ($weight, $style);
-  $defaultFontFamily:     $tabacSlab-font ($weight, $style);
-  $headingFontFamily:   $tabacSlab-font ($weight, $style);
-  $captionFontFamily:    $tabacSlab-font ($weight, $style);
-  $bodyTextFontFamily:    $tabacSlab-font ($weight, $style);
+  $primaryFontFamily:   $TabacSlab;
+  $primaryFontFamily:   $TabacG3;
+  $secondaryFontFamily: $TabacSlab;
+  $defaultFontFamily:   $TabacG3;
+  $headingFontFamily:   $TabacSlab;
+  $captionFontFamily:   $UrbanGrotesk;
+  $SidebarFontFamily:   $UrbanGrotesk;
+  $bodyTextFontFamily:  $TabacG3;
+  $blockquoteFontFamily: $TabacSlab;
 
-  font-family: $font-family;
-  font-style:  $font-style;
-  font-weight: $font-weight;
-}
 
 $paragraphFontSize: 1.131em;
 $paragraphLineHeight: 1.5;
@@ -116,30 +129,21 @@ html {
 
 
 	body {
-		font-family: "Tabac_Slab_Regular";
-		font-style: normal;
-  		font-weight: regular;
+		font-family: $defaultFontFamily;
+
 		}
 
 	h1, h2, h3, h4, h5, h6 {
 		font-family: $headingFontFamily;
-		font-style: normal;
-  		font-weight: semibold;
 		}
 
 	.extra p, .caption p {
 		font-family: $captionFontFamily;
-		font-style: normal;
-  		font-weight: medium;
 		}
 	
 	p, article li {
-		font-family: $bodyTextFontFamily;
-		font-style: normal;
-  		font-weight: regular;
+		font-family: $defaultFontFamily;
 		}
-
-	
 
 
 // theme furniture
@@ -147,8 +151,6 @@ html {
 
 blockquote {
 		font-family: $blockquoteFontFamily;
-		font-style: normal;
-  		font-weight: regular;
 		}
 
 blockquote {
