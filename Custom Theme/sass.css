@@ -142,23 +142,30 @@ html {
 		font-size: 14.5px;
 		}
 	}
-
-
-	body {
-		 $font-family: $bodyTextFontFamily;
-		}
-
+	
 	h1, h2, h3, h4, h5, h6 {
 		 $font-family: $headingFontFamily;
 		}
 
-	.extra p, .caption p {
-		font-family: $captionFontFamily;
+	body {
+		 $font-family: $bodyTextFontFamily;
 		}
 	
 	p, article li {
 		font-family: $defaultFontFamily;
 		}
+		
+	.caption, .extra p, .caption p {
+		font-family: $captionFontFamily;
+		line-height: $paragraphLineHeight;
+		}
+	
+	.caption-title {
+		font-weight: bold;
+		text-transform: uppercase;
+		}
+	
+
 
 
 // theme furniture
@@ -178,34 +185,27 @@ blockquote {
 		color: $alternateTextColor;
 		}
 	}	
+		
 	
-.caption {
-	line-height: $paragraphLineHeight;
-	}
-
-.caption-title {
-	font-weight: bold;
-	text-transform: uppercase;
-	}
-
-@mixin drop-cap-theme {
-	float: left;
-	font-size: 9em;
-	padding-top: 0em;
-	padding-right: 0.05em;
-	margin-bottom: 0;
-	margin-left: 0.05em;
-	line-height: 0.7;
-	padding-bottom: 0;
-	font-family: $primaryFontFamily;
-	font-weight: 600;
-	margin-top: -0.02em;
-	color: $alternateTextColor;
-	}		
-
-@mixin atavist-sidebar-theme {
-		font-size: 1em;
-		line-height: 1.2;
-		color: #333;
-	}
-
+	
+	@mixin drop-cap-theme {
+		float: left;
+		font-size: 9em;
+		padding-top: 0em;
+		padding-right: 0.05em;
+		margin-bottom: 0;
+		margin-left: 0.05em;
+		line-height: 0.7;
+		padding-bottom: 0;
+		font-family: $primaryFontFamily;
+		font-weight: 600;
+		margin-top: -0.02em;
+		color: $alternateTextColor;
+		}		
+	
+	@mixin atavist-sidebar-theme {
+			font-size: 1em;
+			line-height: 1.2;
+			color: #333;
+		}
+	
