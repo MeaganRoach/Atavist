@@ -1,0 +1,170 @@
+<atavist-image use_as_background="false" key="background_image" data_key="title_page" real_size ></atavist-image>
+
+		 
+<div class="cover-text"> 
+	<h1> <atavist-story-data key="the_title" data_key="title" placeholder="Write a title…" class="subtitle"> </atavist-story-data> </h1>
+	<h2> <atavist-story-data key="the_subtitle" data_key="subtitle" placeholder="Write a subtitle…" class="subtitle">
+			<!--This is where the longer description will fill -->
+		</atavist-story-data></h2>
+ 	
+	<h5> <atavist-story-data key="the_byline" data_key="byline" placeholder="Write a Byline..." class="byline">
+			<!--This is where the author will fill -->
+		 </atavist-story-data>
+	</h5>
+
+	<p is="atavist-caption" key="image_credits" data_key="byline" placeholder="Photography, Illustration or Image courtesy" class="byline">
+
+	
+</div><!--Ends Cover Text -->
+
+
+Polymer({
+	properties: {
+		background_image: {
+			type: Object,
+			notify: true,
+			observer: 'backgroundChanged'
+		},
+		
+		the_title: {
+			type: String,
+			notify: true
+		},
+		
+		the_byline: {
+			type: String,
+			notify: true
+		},
+		
+		image_credits: {
+		   type: String,
+		   notify: true,
+		},	
+},
+  	backgroundChanged: function() {
+		this.querySelector('.atavist-image').mode = this.background_image.mode;
+		this.querySelector('.atavist-image').bg_properties = this.background_image.bg_properties;
+	},
+});
+
+& {
+	width:100%;
+	height:100vh%;
+	overflow: hidden;
+}
+// vh can't be used in edit mode
+.in-editing-mode & {
+	height: 100%;
+}
+
+.real-image-size {
+    width: 42rem;
+    max-width: 100%;
+    max-width: -webkit-calc(100% - 8rem);
+    max-width: calc(100% - 8rem);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cover-text {
+    width: 42rem;
+    max-width: 100%;
+    max-width: -webkit-calc(100% - 8rem);
+    max-width: calc(100% - 8rem);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.empty-title-design {
+	display: none;
+}
+
+.cover-text-container {
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		padding: 2em 0 4.5em;
+		z-index: 2;
+		@media screen and (max-width: $smallBreakpoint) {
+			padding: 2em 0 2em;				
+			}		
+		}
+
+.cover-title {
+		font-family: $primaryFontFamily;
+		font-size: 3em;
+		margin-left: -.1em;
+		font-weight: 600;
+		color: $accentColor;
+		margin-bottom: 0.125em;
+		@media screen and (max-width: $smallBreakpoint) {
+			font-size: 2.5rem;
+			}
+		}
+	
+.cover-subtitle { 
+		font-family:  $secondaryFontFamily;
+		font-size: 2em;
+		font-weight: 200;
+		margin-top: 0;
+		opacity: 0.75;
+		}
+
+.byline {
+		font-family: $captionFontFamily;
+		margin-top: 1em;
+		margin-bottom: 0.5em;
+		padding: 0 $outsidePaddingWidth;
+		text-transform: uppercase;
+		color: $accentColor;
+		font-weight: 500;
+		font-size: 1em;
+		letter-spacing: 0.03em;
+		padding-top: 1em;
+		opacity: 0.875;
+		}
+
+
+
+
+
+.cover-text-container {
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		padding: 2em 0 4.5em;
+		z-index: 2;
+		@media screen and (max-width: $smallBreakpoint) {
+			padding: 2em 0 2em;				
+			}		
+		}
+	
+	
+.atavist-cover {
+	position: relative;
+	width: 100%;
+
+}
+
+.section-cover {
+	margin-top: -$sectionTopPadding;
+	@media screen and (max-width: $smallBreakpoint) {
+		margin-top: -$sectionTopPadding-smallBreakpoint;
+}	
+}
+
+
+{
+	"background_image": {
+		"label": "Thumbnail Image",
+		"type": "image"	
+	},	
+	"image_credits": {
+		"type": "text",
+		"label": "Photography, Illustration or Image courtesy",
+		"placeholder": "Photography By John Doe",
+		"default": "Photography By John Doe"
+	}
+	
+}
